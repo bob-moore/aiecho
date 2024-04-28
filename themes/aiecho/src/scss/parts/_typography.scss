@@ -125,6 +125,17 @@ h6 {
     }
 }
 
+.single-entry.post .entry-content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: var(--wp--preset--font-size--scaler-smaller);
+    }
+}
+
 body {
 
     @for $i from 1 through 6 {
