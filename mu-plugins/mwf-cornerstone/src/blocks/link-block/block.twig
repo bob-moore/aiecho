@@ -1,0 +1,19 @@
+<div class="link-block-container">
+    {% if fields.url %}
+        <a href="{{ fields.url }}" class="custom-link-block" style="--background-icon-url: url( {{fields.background_image.url}} )">
+    {% else %}
+        <div class="custom-link-block" style="--background-icon-url: url( {{fields.background_image.url}} )">
+    {% endif %}
+
+        <div class="custom-link-block-inner">
+            <div class="custom-link-block-content">
+                <h3 class="custom-link-block-title">{{ fields.link_text }}</h3>
+            </div>
+        </div>
+
+    {% if fields.url %}
+        </a>
+    {% else %}
+        </div>
+    {% endif %}
+</div>

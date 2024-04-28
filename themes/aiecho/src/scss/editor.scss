@@ -1,0 +1,22 @@
+@use "parts/toolbox";
+@use "parts/typography";
+@use "parts/blocks";
+
+body {
+    /* stylelint-disable selector-class-pattern */
+    .edit-post-visual-editor__post-title-wrapper > *,
+    .block-editor-block-list__layout.is-root-container > *,
+    .wp-block {
+        max-width: unset;
+    }
+    /* stylelint-enable selector-class-pattern */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        font-size: var(--wp--preset--font-size--scaler-regular);
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    "auto-sizes",
+    "dominant-color-images",
+    "embed-optimizer",
+    "optimization-detective",
+    "speculation-rules",
+    "webp-uploads"
+  ]
+}

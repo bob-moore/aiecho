@@ -1,0 +1,31 @@
+{
+    "name": "mwf/wp-env-config",
+    "description": "Automation script for configuring a WordPress environment",
+    "type": "composer",
+    "license": "GPL-2.0+ <http://www.gnu.org/licenses/gpl-2.0.txt>",
+    "authors": [
+        {
+            "name": "Bob Moore",
+            "email": "bob.moore@midwestfamilymadison.com"
+        }
+    ],
+    "autoload": {
+		"psr-4": {
+			"Mwf\\Env\\" : "./src"
+		}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"scripts": {
+        "fetch:plugins": "source .env && rsync $SSH:public_html/wp-content/plugins/ ./plugins -av --ignore-existing",
+        "fetch:themes": "source .env && rsync $SSH:public_html/wp-content/themes/ ./themes -av --ignore-existing",
+        "push:plugins": "source .env && rsync ./plugins/ $SSH:public_html/wp-content/plugins -av --ignore-existing -O",
+		"push:themes": "source .env && rsync ./themes/ $SSH:public_html/wp-content/themes -av --ignore-existing -O",
+		"wp": "wp-env run cli wp",
+        "install:env": [
+            "Mwf\\Env\\Installer::init",
+            "composer run fetch:plugins",
+            "composer run fetch:themes"
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+{
+	"apiVersion": 2,
+	"title": "Custom Block Link",
+	"name": "mwf-cornerstone/block-link",
+	"category": "layout",
+	"icon": "editor-code",
+	"editorScript": "file:./index.tsx",
+	"style": "file:./index.css",
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "render.php"
+	}
+}

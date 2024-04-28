@@ -1,0 +1,173 @@
+@use "mixins";
+
+p:empty {
+    display: none;
+}
+
+
+body [class*="wp-block"] {
+
+    * {
+        --global-kb-font-size-sm: var(--wp--preset--font-size--fixed-small);
+        --global-kb-font-size-md: var(--wp--preset--font-size--fixed-regular);
+        --global-kb-font-size-lg: var(--wp--preset--font-size--scaler-regular);
+        --global-kb-font-size-xl: var(--wp--preset--font-size--scaler-large);
+        --global-kb-font-size-xxl: var(--wp--preset--font-size--scaler-larger);
+        --global-kb-font-size-xxxl: var(--wp--preset--font-size--scaler-extra-large);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+
+        &[class*="wp-block"] {
+            margin: unset;
+            padding: unset;
+        }
+
+        --global-kb-font-size-sm: var(--wp--preset--font-size--scaler-smaller);
+        --global-kb-font-size-md: var(--wp--preset--font-size--scaler-small);
+        --global-kb-font-size-lg: var(--wp--preset--font-size--scaler-regular);
+        --global-kb-font-size-xl: var(--wp--preset--font-size--scaler-large);
+        --global-kb-font-size-xxl: var(--wp--preset--font-size--scaler-larger);
+        --global-kb-font-size-xxxl: var(--wp--preset--font-size--scaler-extra-large);
+    }
+
+    --global-kb-spacing-xxs:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "minorSecond", .5), 1.25
+        )};
+
+    --global-kb-spacing-xs:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "minorSecond", .75), 1.25
+        )};
+
+    --global-kb-spacing-sm:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "majorSecond", 1), 1.25
+        )};
+
+    --global-kb-spacing-md:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "majorSecond", 1), 1.618
+        )};
+
+    --global-kb-spacing-lg:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "majorSecond", 1.25), 1.618
+        )};
+
+    --global-kb-spacing-xl:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "majorSecond", 1.5), 1.618
+        )};
+
+    --global-kb-spacing-xxl:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "majorSecond", 1.75), 2.5
+        )};
+
+    --global-kb-spacing-3xl:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "majorSecond", 2), 2.5
+        )};
+
+    --global-kb-spacing-4xl:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "majorSecond", 2.25), 2.5
+        )};
+
+    --global-kb-spacing-5xl:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "majorSecond", 2.5), 2.5
+        )};
+
+    --global-kb-gap-sm: var(--global-kb-spacing-xxs);
+    --global-kb-gap-md: var(--global-kb-spacing-sm);
+    --global-kb-gap-lg: var(--global-kb-spacing-md);
+
+    --global-row-gutter-sm: var(--global-kb-spacing-xs);
+    --global-row-gutter-md: var(--global-kb-spacing-sm);
+    --global-row-gutter-lg: var(--global-kb-spacing-md);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    .single-content &,
+    .editor-styles-wrapper & {
+        margin: unset;
+    }
+    &.elementor-heading-title {
+        .single-content & {
+            margin: unset;
+        }
+    }
+}
+
+.single-content {
+
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6 {
+        margin-bottom: 1.618rem;
+    }
+}
+
+body {
+
+    @for $i from 1 through 6 {
+
+        $level: 7 - $i;
+
+        h#{$level},
+        .h#{$level} {
+
+            --wp--preset--font-size--scaler-smaller:
+                #{mixins.clamp-fontsize(
+                    mixins.typescale($i, "majorSecond", .5), 2.06969697
+                )};
+
+            --wp--preset--font-size--scaler-small:
+                #{mixins.clamp-fontsize(
+                    mixins.typescale($i, "majorSecond", .75), 2.06969697
+                )};
+
+            --wp--preset--font-size--scaler-regular:
+                #{mixins.clamp-fontsize(
+                    mixins.typescale($i, "majorSecond", 1), 2.06969697
+                )};
+
+            --wp--preset--font-size--scaler-large:
+                #{mixins.clamp-fontsize(
+                    mixins.typescale($i, "majorSecond", 1.2), 2.06969697
+                )};
+
+            --wp--preset--font-size--scaler-larger:
+                #{mixins.clamp-fontsize(
+                    mixins.typescale($i, "majorSecond", 1.4), 2.06969697
+                )};
+            --wp--preset--font-size--scaler-extra-large:
+                #{mixins.clamp-fontsize(
+                    mixins.typescale($i, "majorSecond", 1.6), 2.06969697
+                )};
+        }
+    }
+    --global-kb-font-size-sm: var(--wp--preset--font-size--scaler-smaller);
+    --global-kb-font-size-md: var(--wp--preset--font-size--scaler-small);
+    --global-kb-font-size-lg: var(--wp--preset--font-size--scaler-regular);
+    --global-kb-font-size-xl: var(--wp--preset--font-size--scaler-large);
+    --global-kb-font-size-xxl: var(--wp--preset--font-size--scaler-larger);
+    --global-kb-font-size-xxxl: var(--wp--preset--font-size--scaler-extra-large);
+}

@@ -1,0 +1,56 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./blocks/link-block/index.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************/
+.custom-link-block {
+  display: block;
+  background-color: var(--wp--preset--color--theme-black, #000);
+  background-image: var(--background-icon-url);
+  padding: var(--link-block-padding, 20px);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: auto 50%;
+  text-decoration: none;
+}
+.custom-link-block:hover, .custom-link-block:focus {
+  text-decoration: none;
+}
+.custom-link-block:hover .custom-link-block-inner::after, .custom-link-block:hover .custom-link-block-inner::before, .custom-link-block:focus .custom-link-block-inner::after, .custom-link-block:focus .custom-link-block-inner::before {
+  width: 3rem;
+  height: 3rem;
+}
+.custom-link-block .custom-link-block-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--link-block-padding, 20px);
+  position: relative;
+}
+.custom-link-block .custom-link-block-inner::before, .custom-link-block .custom-link-block-inner::after {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-color: var(--wp--preset--color--primary, #ed1e23);
+  border-style: solid;
+  position: absolute;
+  transition: all 0.25s ease-in-out;
+}
+.custom-link-block .custom-link-block-inner::before {
+  left: 0;
+  top: 0;
+  border-width: 2px 0 0 2px;
+}
+.custom-link-block .custom-link-block-inner::after {
+  right: 0;
+  bottom: 0;
+  border-width: 0 2px 2px 0;
+}
+.custom-link-block .custom-link-block-title {
+  color: var(--wp--preset--color--theme-white, #fff);
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  text-align: center;
+}
+
+/*# sourceMappingURL=index.css.map*/

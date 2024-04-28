@@ -1,0 +1,84 @@
+# Ignore everything in the root except the "wp-content" directory.
+/*
+!.gitignore
+!.gitattributes
+
+# Ignore everything in the "wp-content" directory, except the "plugins"
+# "themes", and "mu-plugins" directories.
+!plugins/
+!themes/
+!mu-plugins/
+!src/
+!composer.json
+!composer.lock
+# Only required src files
+src/*
+!src/.env
+!src/.htaccess
+!src/.wp-env.json
+!src/installer.php
+# Only Active Themes
+themes/*
+!themes/kadence/
+!themes/aiecho/
+# Only Development Plugins
+# plugins/*
+# !plugins/wp-migrate-db-pro/
+# nothing to put here yet
+# Only our active mu-plugin
+mu-plugins/*
+!mu-plugins/mwf-cornerstone.php
+!mu-plugins/mwf-cornerstone/
+# track readme.md in the root (i.e. do NOT ignore it)
+!readme.md
+# ignore all files that start with ~
+~*
+# Flywheel stuff
+.fw-config.php
+# Hidden files
+*.DS_Store
+*Thumbs.db
+*.sass-cache*
+*~imageoptim*
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+# Logs and databases #
+######################
+*.log
+*.sql
+error_log
+# Generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Thumbs.db
+._*
+*.orig
+*.map
+.sass-cache
+# Editor generated files #
+######################
+*.un~
+*.idea
+*.sublime-project
+*.sublime-workspace
+# codekit #
+##########
+config.codekit
+.codekit-cache/
+# dev dependencies #
+####################
+node_modules
+*hot-update*
+# Other #
+####################

@@ -1,0 +1,18 @@
+{
+	"core": null,
+	"mappings": {
+		"wp-content/themes": "./themes",
+		"wp-content/plugins": "./plugins",
+		"wp-content/mu-plugins": "./mu-plugins",
+		"wp-content/src": "./src",
+		".htaccess" : ".htaccess"
+	},
+	"port" : 9020,
+	"testsPort" : 9021,
+	"config": {
+		"WP_DEBUG": true,
+		"WP_DEBUG_LOG": "wp-content/src/debug.log",
+		"WP_DEBUG_DISPLAY": false,
+		"SCRIPT_DEBUG" : true
+	}
+}

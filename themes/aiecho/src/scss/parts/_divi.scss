@@ -1,0 +1,17 @@
+/* stylelint-disable selector-class-pattern */
+body.et_full_width_page {
+
+    #main-content {
+
+        .main_title {
+            display: none;
+        }
+
+        > .container {
+            max-width: unset;
+            width: 100%;
+            padding: 0;
+        }
+    }
+}
+/* stylelint-enable selector-class-pattern */
